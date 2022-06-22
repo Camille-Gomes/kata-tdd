@@ -69,7 +69,7 @@ describe('score tennis', () => {
         expect(score).toBe('Player 1 : 1 - 0 : Player 2');
       });
 
-      it('should return number of set', async () => {
+      it.skip('should return number of set', async () => {
         // given
         const playerOne = {
             score: "0",
