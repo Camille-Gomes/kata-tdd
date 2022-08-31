@@ -1,6 +1,16 @@
 const { getSumExpression } = require('./RPNCalculator');
 
 describe('RPN Calculator', () => {
+    it('should return correct sum', () => {
+        //given
+        const expression = [5];
+
+        //when
+        const value = getSumExpression(expression)
+
+        //then
+        expect(value).toEqual(5); 
+    })
     it('should return correct sum for all operators', () => {
         //given
         const plus = [3, 3, '+'];
@@ -20,22 +30,22 @@ describe('RPN Calculator', () => {
         expect(expressMinus).toEqual(8); 
         expect(expressMultiply).toEqual(25); 
     })
-    it('should return correct sum for all operators', () => {
+    it('should return correct sum for a sequence', () => {
         //given
-        const input = [4, 2, '+', 3, '-'];
+        const expression = [4, 2, '+', 3, '-'];
 
         //when
-        const sum = getSumExpression(input)
+        const sum = getSumExpression(expression)
 
         //then
         expect(sum).toEqual(3); 
     })
-    it('should return correct sum for all operators', () => {
+    it('should return correct sum for a sequence', () => {
         //given
-        const input = [3, 5, 8, '*', 7, '+', '*'];
+        const expression = [3, 5, 8, '*', 7, '+', '*'];
 
         //when
-        const sum = getSumExpression(input)
+        const sum = getSumExpression(expression)
 
         //then
         expect(sum).toEqual(141); 

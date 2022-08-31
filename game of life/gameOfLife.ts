@@ -1,21 +1,3 @@
-export const create2DArray = (cols, rows) => {
-    let twoDArray = [];
-
-    for (let i = 0; i < cols; i++) {
-        for(let j = 0; j< rows; j++) {
-            twoDArray[i] = [];
-        }
-    }
-
-    for (let i = 0; i < cols; i++) {
-        for(let j = 0; j< rows; j++) {
-            twoDArray[i][j] = Math.round(Math.random())
-        }
-    }
-
-    return twoDArray;
-}
-
 export const countNeighbors = (game, i, j) => {
     let sumCells = 0;
     
@@ -61,3 +43,21 @@ export const nextGeneration = (firstGeneration, cols, rows) => {
 
     return next;
 }
+
+// export const create2DArray = (cols, rows) => {
+//     let twoDArray = [];
+
+//     for (let i = 0; i < cols; i++) {
+//         for(let j = 0; j< rows; j++) {
+//             twoDArray[i] = [];
+//         }
+//     }
+
+//     for (let i = 0; i < cols; i++) {
+//         for(let j = 0; j< rows; j++) {
+//             twoDArray[i][j] = Math.round(Math.random())
+//         }
+//     }
+
+//     return twoDArray;
+// }

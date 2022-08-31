@@ -1,6 +1,6 @@
 export const getScore = (bowlingGame) => {
     let game = []
-    let frames = 0
+    let frames: number = 0
 
    for (var i = 0; i < 10; i++) {
        frames = bowlingGame[i].frameOne + bowlingGame[i].frameTwo

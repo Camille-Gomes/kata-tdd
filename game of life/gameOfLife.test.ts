@@ -1,7 +1,7 @@
 const { create2DArray, countNeighbors, nextGeneration } = require('./gameOfLife');
 
 describe('game of life', () => {
-    it('should return a 2d Array', () => {
+    it.skip('should return a 2d Array', () => {
         //given
         const rows = 5;
         const cols = 5;
